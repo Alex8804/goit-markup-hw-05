@@ -461,17 +461,90 @@
             </li>
           </ul>
         </div>
+
+        <div class="footer-subscribe">
+          <p class="footer-subscribe-subjekt">Subscribe</p>
+          <form class="subscribe-form">
+            <input
+              class="subscribe-form-input"
+              type="email"
+              name="user_email"
+              placeholder="E-mail"
+              required
+            />
+            <button class="subscribe-btn" type="submit">
+              Subscribe
+              <svg class="subscribe-icon" width="24" height="24">
+                <use href="./images/icons.svg#subscribe-icon"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
     <!-- ============================MODAL WINDOW============================ -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-close-btn-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+
+        <p class="modal-subject">
+          Leave your contacts and we will call you back
+        </p>
+        <form class="modal-form">
+          <label class="modal-form-field">
+            <span class="modal-form-field-desc">Name</span>
+            <input
+              type="text"
+              name="user_name"
+              class="modal-form-input"
+              required
+              pattern="^[a-zA-Zа-яА-я]+"
+            />
+          </label>
+
+          <label class="modal-form-field">
+            <span class="modal-form-field-desc">Phone</span>
+            <input
+              type="tel"
+              name="user_phone"
+              class="modal-form-input"
+              required
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+              title="xxx-xxx-xx-xx"
+            />
+          </label>
+
+          <label class="modal-form-field">
+            <span class="modal-form-field-desc">Email</span>
+            <input
+              type="email"
+              name="user_email"
+              class="modal-form-input"
+              required
+            />
+          </label>
+
+          <label class="modal-form-field">
+            <span class="modal-form-field-desc">Comment</span>
+            <textarea
+              name="user_massage"
+              class="modal-form-massege"
+              placeholder="Text input"
+            ></textarea>
+          </label>
+
+          <input type="checkbox" name="user_policy" class="modal-check-form" />
+          <label class="modal-check-form-desc" >
+            I accept the terms and conditions of the <a href="">Privacy Policy</a>
+          </label>
+
+          <button class="modal-submit-btn" type="submit">Send</button>
+        </form>
       </div>
     </div>
     <!-- ============================/MODAL WINDOW============================ -->
